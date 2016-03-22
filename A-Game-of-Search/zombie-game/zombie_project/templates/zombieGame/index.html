@@ -1,0 +1,22 @@
+<!DOCTYPE>
+{% extends "zombieGame/base.html" %}
+
+{% load static %}
+
+<html>
+
+<head>
+    <title>Zombie Home</title>
+</head>
+
+{% block content %}
+
+<body>
+    <p><font size="10"> Thanks for playing ! Login to play more:</p>
+    <a href="/zombieGame/login/">Login Here!</a><br />
+    <img src="{% static "images/thriller.jpg" %}" alt="MJ" />
+</body>
+
+{% endblock content %}
+
+</html>

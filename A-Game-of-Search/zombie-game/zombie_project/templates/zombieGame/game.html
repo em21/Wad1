@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends "zombieGame/base.html" %}
+<html lang="en">
+
+{% load staticfiles %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>ZOMBIE</title>
+
+</head>
+<body>
+   {{ game }}  </br>
+       {{street}}
+           {% for t in turn %}
+                   <p><a href={{t}}>{{t}}</p>
+           {% endfor %}
+           {% for house in house_list %}
+               <p><a href="house"><img src="{% static "images/2house.jpg" %}" alt = "House" /></a></p>
+           {% endfor %}
+       {{house}}
+            {% for room in house %}
+                <p><a href="room">{{room}}</a>
+            {% endfor %}
+
+
+
+</body>
+
+{% endblock content %}
+
+</html>
